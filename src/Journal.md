@@ -1,0 +1,3 @@
+### Identify the Base Case and General Case in your countFilesRecursive method. Applying the “Smaller-Caller” rule from Section 3.2, what guarantees that each recursive call operates on a strictly smaller sub-problem and will eventually terminate?
+
+Because my recursive method is a counter that loops through the folders and files in them, it is guaranteed to stop eventually because there is a finite number of files and folders made and eventually the loop will reach a point where there isn't anymore folders to loop through.
