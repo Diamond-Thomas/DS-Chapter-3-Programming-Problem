@@ -29,10 +29,12 @@ public class Main {
         System.out.println("Largest File: " + largest.getName() + " (Size of file: " + largest.getSizeInKB() + " KB)");
 
 
-
-
-
         int fileCount = FileSystemAnalyzer.countFilesRecursive(root);
         System.out.println("Total files counted: " + fileCount);
+
+        int recursiveCount = FileSystemAnalyzer.countFilesRecursive(root);
+        int iterativeCount = FileSystemAnalyzer.countFilesIterative(root);
+
+        assert recursiveCount == iterativeCount;
     }
 }
