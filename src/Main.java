@@ -24,6 +24,10 @@ public class Main {
         Documents.addItem(new FileItem("RandomPIC1", 8654));
 
 
+        System.out.println(FileSystemAnalyzer.calculateTotalSizeRecursive(Documents));
+        FileItem largest = FileSystemAnalyzer.findLargestFileRecursive(root);
+        System.out.println("Largest File: " + largest.getName() + " (Size of file: " + largest.getSizeInKB() + " KB)");
+
 
 
 

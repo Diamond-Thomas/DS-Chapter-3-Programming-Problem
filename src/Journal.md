@@ -1,3 +1,6 @@
 ### Identify the Base Case and General Case in your countFilesRecursive method. Applying the “Smaller-Caller” rule from Section 3.2, what guarantees that each recursive call operates on a strictly smaller sub-problem and will eventually terminate?
 
 Because my recursive method is a counter that loops through the folders and files in them, it is guaranteed to stop eventually because there is a finite number of files and folders made and eventually the loop will reach a point where there isn't anymore folders to loop through.
+
+### Trace how findLargestFileRecursive handles a folder containing only empty subfolders. Why is returning null an effective way to represent “no file found,” and how does your general case handle comparisons without throwing a NullPointerException?
+For findLargestFileRecursive null is effective because you can use it to check for the absence of something without the code breaking because it couldn't find what it was looking for. In findLargestFileRecursive it will completely brush past a specific part of the code so the rest of the code can run. this works for my general method because before it even tries to find files in the folder it's looking in it checks if there is any files and if there isn't any then int won't run becues it will be null and in order for it to run it has to not be null.
