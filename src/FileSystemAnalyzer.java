@@ -88,4 +88,31 @@ public class FileSystemAnalyzer{
 
         return fileCount ;
     }
+
+    public static Folder findFolder(Folder current, String targetName) {
+        if (current.getName().equalsIgnoreCase(targetName)) {
+            return current;
+        }
+        for (FileSystemItem child : current.getItems()) {
+            if (child instanceof Folder) {
+                Folder found = findFolder((Folder) child, targetName);
+                if (found != null) {
+                    return found;
+                }
+            }
+        }
+        return null;
+    }
+
+    public static void printHierarchy(FileSystemItem item, String indent) {
+        if (item instanceof Folder) {
+            System.out.println(indent + item.getName() + "/");
+            Folder folder = (Folder) item;
+            for (FileSystemItem child : folder.getItems()) {
+                printHierarchy(child, indent + "  ");
+            }
+        } else if (item instanceof FileItem) {
+            System.out.println(indent + item.getName() + " (" + item.getSizeInKB() + " KB)");
+        }
+    }
 }

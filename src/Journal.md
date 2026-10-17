@@ -6,3 +6,6 @@ For findLargestFileRecursive null is effective because you can use it to check f
 
 ### Compare your recursive implementation from Phase 1 with the iterative stack implementation from Phase 3 using the evaluation factors in Section 3.8 (Overhead Time, Overhead Space, and Code Clarity). Which solution do you find more intuitive to write and maintain, and why?
 In terms of simplicity making the recursive stack was simpler to read through and slightly shorter and easier to read through once I got the hang of it but because I’m not as experinced with recursive implementations I made more mistakes going through it then I did making the iterative stack method.
+
+### What would happen to both your recursive method (countFilesRecursive) and your iterative stack method (countFilesIterative) if a folder accidentally contained a reference to itself or an ancestor folder (creating an infinite circular reference)? How would each version fail at runtime, and how does this relate to the Smaller-Caller question?
+(placeholder)
